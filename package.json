@@ -24,6 +24,7 @@
     "bootstrap": "^4.0.0-alpha.6",
     "core-js": "^2.5.4",
     "rxjs": "~6.3.3",
+    "skycons": "^1.0.0",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

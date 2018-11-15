@@ -1,3 +1,8 @@
 <div id="app-container">
-
+  <h1 class="text-center">Weather Connect</h1>
+  <h4 *ngIf="city" class="text-center">Weather for {{city}}</h4>
+  <app-main *ngIf='lat != false'
+  [finalLat]='lat'
+  [finalLng]='lng'>
+  </app-main>
 </div>
