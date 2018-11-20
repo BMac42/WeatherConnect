@@ -1,4 +1,16 @@
-<canvas class="center-block" id="sky" height="300" width="300"></canvas>
+
+<div
+ id="weather-block">
+  <h1 class="current-temp">{{currentTemp}}&#176;</h1>
+  <p class="current-date">{{currentDate | date:'MMMM dd, yyyy'}}</p>
+  <p class="current-location" *ngIf="city">{{city}}</p>
+  <p class="current-summary">{{currentSummary}}</p>
+  <!-- <p>{{weather.daily.data}}</p> -->
+  <canvas id="sky" height="300" width="300"></canvas>
+</div>
+<div *ngIf='weatherIcon == false'>
+  <h1>Some shit here</h1>
+</div>
 
 
 

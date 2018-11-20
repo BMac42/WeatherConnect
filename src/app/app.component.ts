@@ -16,7 +16,7 @@ export class AppComponent {
   lng = false;
   weatherResponse: any;
   cityResponse: any;
-  city: string;
+  formattedCity: string;
   weather: Weather;
   weatherIcon: any;
 
@@ -48,8 +48,8 @@ export class AppComponent {
     this.apiService.getGoogle(this.lat, this.lng)
       .subscribe((res) => {
         this.cityResponse = res;
-        this.city = this.cityResponse.results[5].formatted_address;
-        console.log(this.city);
+        this.formattedCity = this.cityResponse.results[5].formatted_address;
+        console.log(this.formattedCity);
       });
     }
   }

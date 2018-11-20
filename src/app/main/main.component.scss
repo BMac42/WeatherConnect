@@ -1,3 +1,40 @@
-canvas{
-  margin-top: 25px;
+#weather-block{
+  position: absolute;
+  border-radius: 30px;
+  background-color: rgba(215, 239, 250, .3);
+  top: 15%;
+  left: 0px;
+  right: 0px;
+  width: 65%;
+  margin: 0 auto;
+  height: 500px;
+  h1.current-temp{
+    font-size: 100px;
+    margin-left: 85px;
+    margin-top: 80px;
+    letter-spacing: 5px;
+    font-weight: 600;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  p.current-date,
+  p.current-location{
+    margin-left: 85px;
+    font-size: 18px;
+  }
+
+  p.current-summary{
+    margin-left: 85px;
+    font-size: 24px;
+    margin-top: 25px;
+  }
+
+  h4{
+    font-family: 'Ubuntu';
+  }
+  canvas {
+    top: 80px;
+    position: absolute;
+    right: 125px;
+  }
 }
+
