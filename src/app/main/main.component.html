@@ -1,15 +1,26 @@
 
-<div
- id="weather-block">
-  <h1 class="current-temp">{{currentTemp}}&#176;</h1>
-  <p class="current-date">{{currentDate | date:'MMMM dd, yyyy'}}</p>
-  <p class="current-location" *ngIf="city">{{city}}</p>
-  <p class="current-summary">{{currentSummary}}</p>
-  <!-- <p>{{weather.daily.data}}</p> -->
-  <canvas id="sky" height="300" width="300"></canvas>
-</div>
-<div *ngIf='weatherIcon == false'>
-  <h1>Some shit here</h1>
+<div id="weather-block" [@expandShrink]="expand ? 'expand' : 'shrink'">
+    <div class="expand-icon" (click)="isExpand()">
+      <img src="../../assets/media/expand.png" [@expandShrink]="expand ? 'expandFlip' : 'shrinkFlip'">
+    </div>
+
+    <span *ngIf='showToday' class="weather-currently">
+      <h1 class="current-temp">{{currentTemp}}&#176;</h1>
+      <p class="current-date">{{currentDate | date:'MMMM dd, yyyy'}}</p>
+      <p class="current-location" *ngIf="city">{{city}}</p>
+      <p class="current-summary">{{currentSummary}}</p>
+      <!-- <p>{{weather.daily.data}}</p> -->
+      <app-skycon
+      *ngIf='weatherIcon'
+      [icon]="weatherIcon">
+      </app-skycon>
+      <!-- <canvas id="sky" height="300" width="300"></canvas> -->
+    </span>
+
+    <app-detailed *ngIf='!showToday'>
+
+    </app-detailed>
+
 </div>
 
 

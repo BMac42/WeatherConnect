@@ -2,12 +2,21 @@
   position: absolute;
   border-radius: 30px;
   background-color: rgba(215, 239, 250, .3);
-  top: 15%;
+  top: 16%;
   left: 0px;
   right: 0px;
   width: 65%;
   margin: 0 auto;
   height: 500px;
+  .expand-icon{
+    float: right;
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 20px;
+    &:hover{
+      cursor: pointer;
+    }
+  }
   h1.current-temp{
     font-size: 100px;
     margin-left: 85px;
@@ -30,11 +39,6 @@
 
   h4{
     font-family: 'Ubuntu';
-  }
-  canvas {
-    top: 80px;
-    position: absolute;
-    right: 125px;
   }
 }
 

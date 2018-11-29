@@ -6,13 +6,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
-import { PreLoaderComponent } from './pre-loader/pre-loader.component'
+import { PreLoaderComponent } from './pre-loader/pre-loader.component';
+import { DetailedComponent } from './main/detailed/detailed.component';
+import { SkyconComponent } from './skycon/skycon.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     PreLoaderComponent,
+    DetailedComponent,
+    SkyconComponent,
   ],
   imports: [
     BrowserModule,
