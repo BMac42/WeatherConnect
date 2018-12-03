@@ -8,7 +8,7 @@
       <h1 class="current-temp">{{currentTemp}}&#176;</h1>
       <p class="current-date">{{currentDate | date:'MMMM dd, yyyy'}}</p>
       <p class="current-location" *ngIf="city">{{city}}</p>
-      <p class="current-summary">{{currentSummary}}</p>
+      <p class="current-summary">{{weather.minutely.summary}}</p>
       <!-- <p>{{weather.daily.data}}</p> -->
       <app-skycon
       *ngIf='weatherIcon'
@@ -17,7 +17,12 @@
       <!-- <canvas id="sky" height="300" width="300"></canvas> -->
     </span>
 
-    <app-detailed *ngIf='!showToday'>
+    <app-detailed *ngIf='!showToday'
+    [todayDate]='currentDate'
+    [detailLat]='finalLat'
+    [detailLng]='finalLng'
+    [dailyWeather]='weather'
+    >
 
     </app-detailed>
 

@@ -1,3 +1,20 @@
-<p>
-  detailed works!
-</p>
+
+<div class="container">
+  <div class="today-head">
+    <h2 class="text-center">Conditions for {{todayDate | date:'MMMM dd, yyyy'}}</h2>
+    <p class="text-center">{{dailyWeather.daily.summary}}</p>
+  </div>
+  <div class="today-conditions">
+    <div class="today-temp">
+      <div class="temp">
+        <p>{{dailyWeather.daily.data[0].apparentTemperatureHigh | number}}</p>
+        <i class="fas fa-arrow-up"></i>
+      </div>
+      <div class="temp-divide">
+      <div class="temp">
+        <p>{{dailyWeather.daily.data[0].apparentTemperatureLow | number}}</p>
+        <i class="fas fa-arrow-down"></i>
+      </div>
+    </div>
+  </div>
+</div>

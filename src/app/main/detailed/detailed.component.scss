@@ -1,0 +1,33 @@
+.today-head{
+  h2{
+    font-family: 'Ubuntu', sans-serif;
+  }
+  p{
+    font-size: 15px;
+    font-weight: 500;
+  }
+}
+
+.today-conditions{
+  display: flex;
+  // justify-content: space-evenly;
+  .today-temp{
+    position: relative;
+    display: inline-block;
+    .temp-divide{
+      position: absolute;
+      background-color: white;
+      height: 2px;
+      width: 100%;
+    }
+    i{
+      display: inline;
+      font-size: 10px;
+    }
+    p{
+      display: inline;
+      font-size: 50px;
+    }
+  }
+}
+

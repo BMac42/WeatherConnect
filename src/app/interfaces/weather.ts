@@ -4,13 +4,16 @@ import { CommonModule } from '@angular/common';
 export interface Weather {
   alerts: Alert[];
   currently: Currently;
-  daily: Data<DayForecast[]>;
+  // daily: Data<DayForecast[]>;
+  daily: Daily;
+  minutely: Minutely;
 }
 
-// export interface Location {
-//   latitude: any;
-//   longitude: any;
-// }
+export interface Daily {
+  data: DayForecast[];
+  icon: string;
+  summary: string;
+}
 
 export interface Alert {
   description: string;
@@ -46,9 +49,15 @@ export interface Currently {
   windSpeed: number;
 }
 
-interface Data<T> {
-  data: T;
+export interface Minutely {
+  data: any[];
+  icon: string;
+  summary: string;
 }
+
+// interface Data<T> {
+//   data: T;
+// }
 
 export interface DayForecast {
   date: any;

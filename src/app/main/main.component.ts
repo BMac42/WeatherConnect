@@ -48,7 +48,6 @@ export class MainComponent implements OnInit{
   constructor(private skycons: SkyconsService, private apiService: ApiService) { }
 
   ngOnInit() {
-    console.log('test here ' this.weatherIcon);
     // get date
     this.currentDate = new Date();
     console.log(this.currentDate);
@@ -59,9 +58,11 @@ export class MainComponent implements OnInit{
         this.weather = res;
         // print darksky api get in console
         console.log(this.weather);
+        this.weather.daily.data[0].apparentTemperatureHigh
         this.weatherIcon = this.weather.currently.icon.replace(/-/g, '_').toUpperCase();
 
         // get temp
+        // this.currentTemp = this.weather.currently.apparentTemperature.toString().slice(0, 2);
         this.currentTemp = this.weather.currently.apparentTemperature.toString().slice(0, 2);
 
         // get summary
@@ -73,8 +74,4 @@ export class MainComponent implements OnInit{
   this.expand = !this.expand;
   this.showToday = !this.showToday;
   }
-
-
-
-
 }

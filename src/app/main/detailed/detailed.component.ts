@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ElementRef, Inject, Input } from '@angular/core';
+import { Weather } from '../../interfaces/weather';
 
 @Component({
   selector: 'app-detailed',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailedComponent implements OnInit {
 
+  todayGraph = false;
+  @Input() dailyWeather: Weather;
+  @Input() detailLat: number;
+  @Input() detailLng: number;
+  @Input() todayDate: string;
+
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(){
+
+  }
   }
 
-}
+
