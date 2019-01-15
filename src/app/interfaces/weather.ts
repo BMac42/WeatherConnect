@@ -15,6 +15,20 @@ export interface Daily {
   summary: string;
 }
 
+export interface DayForecast {
+  date: any;
+  time: number;
+  summary: string;
+  icon: string;
+  sunriseTime: number;
+  sunsetTime: number;
+  uvIndex: number;
+  humidity: number;
+  precipProbability: number;
+  apparentTemperatureHigh: number;
+  apparentTemperatureLow: number;
+}
+
 export interface Alert {
   description: string;
   expires: number;
@@ -59,16 +73,3 @@ export interface Minutely {
 //   data: T;
 // }
 
-export interface DayForecast {
-  date: any;
-  time: number;
-  summary: string;
-  icon: string;
-  sunriseTime: number;
-  sunsetTime: number;
-  uvIndex: number;
-  humidity: number;
-  precipProbability: number;
-  apparentTemperatureHigh: number;
-  apparentTemperatureLow: number;
-}

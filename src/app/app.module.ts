@@ -9,6 +9,7 @@ import { MainComponent } from './main/main.component';
 import { PreLoaderComponent } from './pre-loader/pre-loader.component';
 import { DetailedComponent } from './main/detailed/detailed.component';
 import { SkyconComponent } from './skycon/skycon.component';
+import { WeekComponent } from './main/week/week.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { SkyconComponent } from './skycon/skycon.component';
     PreLoaderComponent,
     DetailedComponent,
     SkyconComponent,
+    WeekComponent,
   ],
   imports: [
     BrowserModule,

@@ -10,8 +10,11 @@
 
 .today-conditions{
   display: flex;
-  // justify-content: space-evenly;
-  .today-temp{
+  justify-content: space-evenly;
+  margin-top: 30px;
+  padding-bottom: 100px;
+  .condition-block{
+    text-align: center;
     position: relative;
     display: inline-block;
     .temp-divide{

@@ -2,19 +2,35 @@
 <div class="container">
   <div class="today-head">
     <h2 class="text-center">Conditions for {{todayDate | date:'MMMM dd, yyyy'}}</h2>
-    <p class="text-center">{{dailyWeather.daily.summary}}</p>
+    <p class="text-center">{{dailyWeather.daily.data[0].summary}}</p>
   </div>
   <div class="today-conditions">
-    <div class="today-temp">
+    <div class="condition-block">
+      <h4>High / Low</h4>
       <div class="temp">
-        <p>{{dailyWeather.daily.data[0].apparentTemperatureHigh | number}}</p>
+        <p>{{dailyWeather.daily.data[0].apparentTemperatureHigh | number:'1.0-0'}}&#176;</p>
         <i class="fas fa-arrow-up"></i>
       </div>
       <div class="temp-divide">
       <div class="temp">
-        <p>{{dailyWeather.daily.data[0].apparentTemperatureLow | number}}</p>
+        <p>{{dailyWeather.daily.data[0].apparentTemperatureLow | number:'1.0-0'}}&#176;</p>
         <i class="fas fa-arrow-down"></i>
       </div>
     </div>
   </div>
+  <div class="condition-block">
+    <h4>Precip %</h4>
+    <p>{{dailyWeather.currently.precipProbability | percent}}</p>
+  </div>
+  <div class="condition-block">
+    <h4>Humidity</h4>
+    <p>{{dailyWeather.currently.humidity | percent}}</p>
+  </div>
+  <div class="condition-block">
+    <h4>UV Index</h4>
+    <p>{{dailyWeather.currently.uvIndex}}</p>
+  </div>
+  </div>
+  <app-week>
+  </app-week>
 </div>
