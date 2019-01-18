@@ -1,5 +1,5 @@
-
-<div id="weather-block" [@expandShrink]="expand ? 'expand' : 'shrink'">
+<app-pre-loader *ngIf='!currentSummary'></app-pre-loader>
+<div *ngIf='currentSummary' id="weather-block" [@expandShrink]="expand ? 'expand' : 'shrink'">
     <div class="expand-icon" (click)="isExpand()">
       <img src="../../assets/media/expand.png" [@expandShrink]="expand ? 'expandFlip' : 'shrinkFlip'">
     </div>
