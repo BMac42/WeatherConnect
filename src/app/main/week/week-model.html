@@ -1,0 +1,14 @@
+<div class="week-container">
+  <div class="week-item-container" *ngFor="let dateItem of date; let i = index">
+    <p class="date">{{date[i] | date:'MMMM dd, yyyy'}}</p>
+    <app-skycon *ngIf='icon' [icon]="icon[i]" [id]="'#sky-' + i">
+    </app-skycon>
+    <p class="text-center">High / Low</p>
+    <div class="temp-flex">
+      <p class="temp">{{hi[i] | number:'1.0-0'}}&#176;</p>
+      <p class="temp">{{low[i] | number:'1.0-0'}}&#176;</p>
+    </div>
+  </div>
+</div>
+
+

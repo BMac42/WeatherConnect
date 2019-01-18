@@ -12,6 +12,7 @@
       <!-- <p>{{weather.daily.data}}</p> -->
       <app-skycon
       *ngIf='weatherIcon'
+      [id]="getId"
       [icon]="weatherIcon">
       </app-skycon>
       <!-- <canvas id="sky" height="300" width="300"></canvas> -->

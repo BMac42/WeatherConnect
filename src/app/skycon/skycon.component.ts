@@ -1,22 +1,32 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { SkyconsService } from '../services/skycons.service';
 
+
+const daysObject = [1, 2, 3, 4, 5];
+
 @Component({
   selector: 'app-skycon',
   templateUrl: './skycon.component.html',
   styleUrls: ['./skycon.component.scss']
 })
+
 export class SkyconComponent implements OnInit {
 
   @Input() icon: string;
+  @Input() id: any;
 
-  constructor(private skycons: SkyconsService) { }
+  constructor(private skycons: SkyconsService) {
+
+   }
 
   ngOnInit() {
-    this.skycons.functions.add('sky', this.skycons.getIcon(this.icon));
-    this.skycons.functions.play();
 
-    console.log(this.icon);
+    setTimeout(() => {
+      console.log(this.skycons.functions);
+      console.log('current id ' + this.id);
+      this.skycons.functions.add(this.id, this.skycons.getIcon(this.icon));
+      this.skycons.functions.play();
+    }, .1);
   }
 
 }

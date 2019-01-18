@@ -2,7 +2,7 @@
   position: absolute;
   border-radius: 30px;
   background-color: rgba(215, 239, 250, .3);
-  top: 16%;
+  top: 10%;
   left: 0px;
   right: 0px;
   width: 65%;
@@ -35,11 +35,15 @@
     margin-left: 85px;
     font-size: 24px;
     margin-top: 25px;
-    max-width: 46%;
+    max-width: 43%;
   }
 
   h4{
     font-family: 'Ubuntu';
+  }
+
+  h2 {
+    margin-top: 35px;
   }
 }
 

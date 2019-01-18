@@ -44,6 +44,7 @@ export class MainComponent implements OnInit{
   currentDate: any;
   currentSummary: string;
   expand = false;
+  getId = '#sky';
 
   constructor(private skycons: SkyconsService, private apiService: ApiService) { }
 
@@ -58,7 +59,6 @@ export class MainComponent implements OnInit{
         this.weather = res;
         // print darksky api get in console
         console.log(this.weather);
-        this.weather.daily.data[0].apparentTemperatureHigh
         this.weatherIcon = this.weather.currently.icon.replace(/-/g, '_').toUpperCase();
 
         // get temp

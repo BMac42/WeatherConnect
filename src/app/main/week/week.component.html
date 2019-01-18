@@ -1,6 +1,10 @@
 <div class="week-wrapper">
-  <h2>7 Day Forecast</h2>
-  <div *ngFor="let dayItem of days;">
-    <h1>{{dayItem}}</h1>
-  </div>
+  <h2>5 Day Forecast</h2>
+    <app-week-model
+    [date]='days'
+    [hi]='daysTempHi'
+    [low]='daysTempLow'
+    [icon]='daysIcon'
+    >
+  </app-week-model>
 </div>

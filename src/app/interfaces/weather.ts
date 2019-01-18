@@ -9,6 +9,11 @@ export interface Weather {
   minutely: Minutely;
 }
 
+export interface WeekDay{
+   day: any;
+   hi: any;
+}
+
 export interface Daily {
   data: DayForecast[];
   icon: string;

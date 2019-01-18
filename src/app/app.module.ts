@@ -10,6 +10,7 @@ import { PreLoaderComponent } from './pre-loader/pre-loader.component';
 import { DetailedComponent } from './main/detailed/detailed.component';
 import { SkyconComponent } from './skycon/skycon.component';
 import { WeekComponent } from './main/week/week.component';
+import { WeekObjectComponent } from './main/week/week.model';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { WeekComponent } from './main/week/week.component';
     DetailedComponent,
     SkyconComponent,
     WeekComponent,
+    WeekObjectComponent
   ],
   imports: [
     BrowserModule,

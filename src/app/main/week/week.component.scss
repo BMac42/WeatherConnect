@@ -1,7 +1,38 @@
 .week-wrapper{
   border-top: 1px solid white;
+  padding-top: 35px;
   h2 {
     font-family: 'Ubuntu', sans-serif;
     text-align: center;
+    margin-bottom: 30px;
+    margin-top: 0;
   }
 }
+
+.week-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.week-item-container{
+  p{
+    font-size: 18px;
+  }
+  p.date{
+    display: block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  p.text-center{
+    margin: 5px auto 5px auto;
+  }
+  p.temp{
+    display: inline-block;
+    text-align: center;
+    font-family: 'Ubuntu';
+  }
+  div.temp-flex{
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+

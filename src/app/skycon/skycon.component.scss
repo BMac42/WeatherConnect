@@ -3,3 +3,14 @@ canvas {
   position: absolute;
   right: 125px;
 }
+
+canvas[id^="#sky-"] {
+  position: relative;
+  display: block;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  width: 120px;
+  margin: 0 auto;
+}

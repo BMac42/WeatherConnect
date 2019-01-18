@@ -8,29 +8,27 @@
     <div class="condition-block">
       <h4>High / Low</h4>
       <div class="temp">
-        <p>{{dailyWeather.daily.data[0].apparentTemperatureHigh | number:'1.0-0'}}&#176;</p>
+        <p>{{dailyWeather.daily.data[0].temperatureHigh | number:'1.0-0'}}&#176;</p>
         <i class="fas fa-arrow-up"></i>
-      </div>
-      <div class="temp-divide">
-      <div class="temp">
-        <p>{{dailyWeather.daily.data[0].apparentTemperatureLow | number:'1.0-0'}}&#176;</p>
+        <p> / </p>
+        <p>{{dailyWeather.daily.data[0].temperatureLow | number:'1.0-0'}}&#176;</p>
         <i class="fas fa-arrow-down"></i>
-      </div>
     </div>
   </div>
   <div class="condition-block">
     <h4>Precip %</h4>
-    <p>{{dailyWeather.currently.precipProbability | percent}}</p>
+    <p>{{dailyWeather.daily.data[0].precipProbability | percent}}</p>
   </div>
   <div class="condition-block">
     <h4>Humidity</h4>
-    <p>{{dailyWeather.currently.humidity | percent}}</p>
+    <p>{{dailyWeather.daily.data[0].humidity | percent}}</p>
   </div>
   <div class="condition-block">
     <h4>UV Index</h4>
-    <p>{{dailyWeather.currently.uvIndex}}</p>
+    <p>{{dailyWeather.daily.data[0].uvIndex}}</p>
   </div>
   </div>
-  <app-week>
+  <app-week
+  [weekWeather]='dailyWeather'>
   </app-week>
 </div>
