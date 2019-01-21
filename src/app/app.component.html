@@ -1,6 +1,7 @@
+<app-pre-loader *ngIf='!lat'></app-pre-loader>
 <div id="app-container">
   <!-- <h1 class="text-center">Weather Connect</h1> -->
-  <app-main *ngIf='lat != false'
+  <app-main *ngIf='lat'
   [finalLat]='lat'
   [finalLng]='lng'
   [city]='formattedCity'
