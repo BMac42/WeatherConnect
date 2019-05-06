@@ -1,3 +1,5 @@
+
+
 #weather-block{
   position: absolute;
   border-radius: 30px;
@@ -8,6 +10,24 @@
   width: 65%;
   margin: 0 auto;
   height: 500px;
+
+  @media screen and (max-width: 800px) {
+    height: auto;
+  }
+
+  @media screen and (max-width: 1180px){
+    width: 90%;
+  }
+
+  @media screen and (min-width: 1800px){
+    width: 50%;
+  }
+
+  @media screen and (min-width: 2500px){
+    width: 40%;
+  }
+
+
   .expand-icon{
     float: right;
     display: inline-block;
@@ -24,6 +44,9 @@
     letter-spacing: 5px;
     font-weight: 600;
     font-family: 'Ubuntu', sans-serif;
+     @media screen and (max-width: 800px) {
+       margin-top: 20px;
+     }
   }
   p.current-date,
   p.current-location{
@@ -36,6 +59,14 @@
     font-size: 24px;
     margin-top: 25px;
     max-width: 43%;
+     @media screen and (max-width: 800px) {
+       max-width: fit-content;
+       text-align: center;
+       margin: auto;
+       margin-top: 40px;
+       margin-bottom: 40px;
+       margin-left: 85px;
+     }
   }
 
   h4{
@@ -46,4 +77,6 @@
     margin-top: 35px;
   }
 }
+
+
 

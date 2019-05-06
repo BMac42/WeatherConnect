@@ -4,6 +4,7 @@ import { formatDate, CommonModule } from '@angular/common';
 
 
 const daysObject = [1, 2, 3, 4, 5];
+
 @Component({
   selector: 'app-week',
   templateUrl: './week.component.html',
@@ -27,7 +28,7 @@ export class WeekComponent implements OnInit {
     this.days = daysObject.map((i) => this.weekDates(i));
   }
 
-  /* check if weekWeather @Input is loaded in component yet (is undefined when called in constructor) */
+  /* check if weekWeather @Input is loaded in component (is undefined when called in constructor) */
   ngOnInit() {
     if (this.weekWeather) {
       this.daysTempHi = daysObject.map((_) => this.weekTempHi(_));

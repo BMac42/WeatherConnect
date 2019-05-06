@@ -2,6 +2,13 @@ canvas {
   top: 80px;
   position: absolute;
   right: 125px;
+  @media screen and (max-width: 800px) {
+    position: relative;
+    display: block;
+    margin: auto;
+    top: initial;
+    right: initial;
+  }
 }
 
 canvas[id^="#sky-"] {

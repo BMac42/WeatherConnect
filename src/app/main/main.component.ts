@@ -15,10 +15,10 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
       height: '800px',
       width: '90%',
     })),
-    state('shrink', style({
-      height: '500px',
-      width: '65%',
-    })),
+    // state('shrink', style({
+    //   height: '500px',
+    //   width: '65%',
+    // })),
     state('expandFlip', style({
       transform: 'rotate(180deg)',
     })),
@@ -42,7 +42,7 @@ export class MainComponent implements OnInit{
   weatherIcon: string;
   currentTemp: any;
   currentDate: any;
-  currentSummary: string;
+  currentSummary = '';
   expand = false;
   getId = '#sky';
 
@@ -57,12 +57,12 @@ export class MainComponent implements OnInit{
     this.apiService.getWeather(this.finalLat, this.finalLng)
       .subscribe((res) => {
         this.weather = res;
+
         // print darksky api get in console
         console.log(this.weather);
         this.weatherIcon = this.weather.currently.icon.replace(/-/g, '_').toUpperCase();
 
         // get temp
-        // this.currentTemp = this.weather.currently.apparentTemperature.toString().slice(0, 2);
         this.currentTemp = this.weather.currently.apparentTemperature.toString().slice(0, 2);
 
         // get summary
