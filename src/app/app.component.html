@@ -1,4 +1,9 @@
-<app-pre-loader *ngIf='!lat'></app-pre-loader>
+<app-pre-loader
+[loadCheck]='lat'
+*ngIf='!lat'
+>
+
+</app-pre-loader>
 <div id="app-container">
   <!-- <h1 class="text-center">Weather Connect</h1> -->
   <app-main *ngIf='lat'

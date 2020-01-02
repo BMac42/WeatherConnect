@@ -10,11 +10,10 @@ import { Weather } from '../interfaces/weather';
 export class ApiService {
 
   constructor(private http: HttpClient) { }
-
-  getGoogle(lat, lng) {
-    return this.http.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=AIzaSyBAQ09H6mx4rW10kArm5nRpn-IPUqXLZMg`)
-      .pipe(map((res) => res));
-  }
+  // getGoogle(lat, lng) {
+  //   return this.http.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=AIzaSyBAQ09H6mx4rW10kArm5nRpn-IPUqXLZMg`)
+  //     .pipe(map((res) => res));
+  // }
 
   getWeather(lat, lng): Observable<Weather> {
     return this.http.get

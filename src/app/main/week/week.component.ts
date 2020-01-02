@@ -25,7 +25,8 @@ export class WeekComponent implements OnInit {
 
 
   constructor() {
-    this.days = daysObject.map((i) => this.weekDates(i));
+    this.days = daysObject.map(
+      (i) => this.weekDates(i));
   }
 
   /* check if weekWeather @Input is loaded in component (is undefined when called in constructor) */

@@ -10,7 +10,6 @@ import { Weather } from './interfaces/weather';
 })
 export class AppComponent {
   title = 'weather-connect';
-
   posit: any;
   lat = false;
   lng = false;
@@ -43,13 +42,6 @@ export class AppComponent {
     const lat = position.coords.latitude;
     this.lat = position.coords.latitude;
     this.lng = position.coords.longitude;
-
-    /* get city from coords */
-    this.apiService.getGoogle(this.lat, this.lng)
-      .subscribe((res) => {
-        this.cityResponse = res;
-        this.formattedCity = this.cityResponse.results[5].formatted_address;
-      });
     }
   }
 
