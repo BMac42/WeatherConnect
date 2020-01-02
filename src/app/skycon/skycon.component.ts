@@ -22,8 +22,6 @@ export class SkyconComponent implements OnInit {
   ngOnInit() {
 
     setTimeout(() => {
-      console.log(this.skycons.functions);
-      console.log('current id ' + this.id);
       this.skycons.functions.add(this.id, this.skycons.getIcon(this.icon));
       this.skycons.functions.play();
     }, .1);

@@ -51,15 +51,12 @@ export class MainComponent implements OnInit{
   ngOnInit() {
     // get date
     this.currentDate = new Date();
-    console.log(this.currentDate);
-    console.log(this.skycons);
     // get weather from coords
     this.apiService.getWeather(this.finalLat, this.finalLng)
       .subscribe((res) => {
         this.weather = res;
 
         // print darksky api get in console
-        console.log(this.weather);
         this.weatherIcon = this.weather.currently.icon.replace(/-/g, '_').toUpperCase();
 
         // get temp

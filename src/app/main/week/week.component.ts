@@ -34,8 +34,6 @@ export class WeekComponent implements OnInit {
       this.daysTempHi = daysObject.map((_) => this.weekTempHi(_));
       this.daysTempLow = daysObject.map((_) => this.weekTempLow(_));
       this.daysIcon = daysObject.map((_) => this.weekIcon(_));
-
-      console.log(this.weekWeather);
     }
   }
 

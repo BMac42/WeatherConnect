@@ -14,7 +14,6 @@ export class SkyconsService {
   constructor() { }
 
   getIcon(icon) {
-    console.log('working with ', icon);
     return icon;
   }
 

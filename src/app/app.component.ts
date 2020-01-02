@@ -25,7 +25,7 @@ export class AppComponent {
   ngOnInit() {
     /* grab coordinates from users location */
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition((position) => this.posit = position, console.log);
+      navigator.geolocation.getCurrentPosition((position) => this.posit = position);
     }
   }
 
@@ -49,7 +49,6 @@ export class AppComponent {
       .subscribe((res) => {
         this.cityResponse = res;
         this.formattedCity = this.cityResponse.results[5].formatted_address;
-        console.log(this.formattedCity);
       });
     }
   }

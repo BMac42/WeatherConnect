@@ -21,7 +21,6 @@ export class WeekObjectComponent implements OnInit {
   }
 
   ngOnInit(){
-    console.log(this.icon);
   }
 }
 
